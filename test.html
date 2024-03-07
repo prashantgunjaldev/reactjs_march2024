@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1>Welcome to React Js Batch.</h1>
+    <p id="result"></p>
+
+    <h3>Numbers</h3>
+    <ul id="listOfNo"></ul>
+
+    <script>
+      // let, const, var
+      var textVar;
+      textVar = "Data in var"; // Global scope -> Hoisting
+      let textLet = "Data in let"; // Block scope {}
+      const textConst = "Data in const"; // Final fix value
+
+      textVar = 100; // diff type of value can be assigned
+
+      //Function
+      function printResult(text) {
+        document.getElementById("result").innerText = text;
+      }
+
+      //Arraow function
+      const addition = (no1, no2) => {
+        let res = no1 + no2;
+        return res;
+      };
+
+      // Alternate syntaxt for arrow function
+      const addition2 = (no1, no2) => no1 + no2;
+
+      printResult(textVar);
+
+      const addRes = addition(10, 20);
+      printResult(addRes);
+
+      const addRes1 = addition(10, 20);
+      printResult(addRes1);
+
+      // map, filter, reducer
+      const num = [1, 2, 3, 4, 5];
+      //Double the number
+      const doubleNum = num.map((item) => item * 2);
+
+      //
+      //   let content = "";
+      //   for (let i = 0; i < num.length; i++) {
+      //     content += `<li> ${num[i]} </li>`;
+      //   }
+
+      //   console.log(content);
+      //   document.getElementById("listOfNo").innerHTML = content;
+
+      const liItems = num.map((item) => `<li> ${item} </li>`);
+      document.getElementById("listOfNo").innerHTML = liItems.join("");
+      console.log(liItems.join(""));
+
+      //listOfNo
+
+      console.log("doubleNum", doubleNum);
+
+      // Give me even numbers
+      const evenNum = num.filter((item) => item % 2 === 0);
+      console.log("evenNum", evenNum);
+
+      // Addition of numbers
+
+      const finalCount = num.reduce((count, item) => {
+        count = count + item;
+        return count;
+      }, 0);
+      console.log("finalCount", finalCount);
+
+      // import export
+
+      // Object
+      let obj = {
+        id: 1,
+        name: "Prashant Gunjal",
+        dept: "Computer",
+        age: 33,
+      };
+      // rest, spread
+      // ...
+      console.log("Object", obj);
+      let newObj = { ...obj };
+      newObj.name = "New Name";
+      console.log("Object", obj);
+      console.log("newObj", newObj);
+
+      let { name, age } = obj;
+      console.log("Picked name", name, age);
+
+      const nameArr = ["Prashat", "Vikram", "Sai"];
+      console.log("Name at o", nameArr[0]);
+      let [name1] = nameArr;
+      console.log("Name at o", name1);
+
+      let { id, ...person } = obj;
+      console.log("Picked id", id, person);
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
