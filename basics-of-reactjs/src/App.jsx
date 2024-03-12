@@ -7,7 +7,7 @@ function App() {
   return (
     // Fragment
     <>
-      <AppHeader />
+      <AppHeader></AppHeader>
       <AppContent />
       <AppFooter />
     </>
