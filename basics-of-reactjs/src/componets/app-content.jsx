@@ -1,22 +1,15 @@
-function AppContent() {
+function AppContent(props) {
   return (
-    <content>
-      <p>
-        You can also directly specify the project name and the template you want
-        to use via additional command line options. For example, to scaffold a
-        Vite + Vue project, run:
-      </p>
-      <p>
-        You can also directly specify the project name and the template you want
-        to use via additional command line options. For example, to scaffold a
-        Vite + Vue project, run:
-      </p>
-      <p>
-        You can also directly specify the project name and the template you want
-        to use via additional command line options. For example, to scaffold a
-        Vite + Vue project, run:
-      </p>
-    </content>
+    <div
+      style={{
+        margin: "10px 10px",
+        padding: "20px",
+        border: "solid black 1px",
+        borderRadius: "5px",
+      }}
+    >
+      {props.content}
+    </div>
   );
 }
 

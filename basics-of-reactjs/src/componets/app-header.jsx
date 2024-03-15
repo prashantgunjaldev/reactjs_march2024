@@ -1,48 +1,33 @@
-import { useState } from "react";
 import "./app-header.css";
-function AppHeader() {
-  let [content, setContent] = useState("");
-  let companyName = "Training Institute";
-  let options = ["Home Page", "About Us", "Contact Us", "Trainings"];
-
+function AppHeader(props) {
   console.log("AppHeader component is executed");
-
-  // let style = {
-  //   color: 'red',
-  //   paddingRight: 10px
-  // }
-
-  // let content = "";
-
-  function handleClickEvent(pageName) {
-    // alert("Clicked some button" + pageName);
-    setContent(pageName + " is selected");
-    // console.log("Updated content", content);
-  }
 
   return (
     <header>
-      <h1>{companyName}</h1>
+      <h1>{props.companyName}</h1>
 
       <nav>
         {/* Array of XML/HTML Tags can be render by React JS*/}
-        {options.map((item) => (
+        {props.options.map((item) => (
           <a
+            key={item.id}
             style={{
               color: "red",
-              marginRight: "5px",
+              margin: "5px 10px",
               padding: "3px",
-              border: "dashed",
+              border: "solid black 1px",
+              borderRadius: "5px",
+              cursor: "pointer",
             }}
             onClick={() => {
-              handleClickEvent(item);
+              props.handleOnClick(item.id);
             }}
           >
-            {item}
+            {item.title}
           </a>
         ))}
       </nav>
-      {content.length > 0 && <div className="styleAsButon">{content}</div>}
+      {/* {content.length > 0 && <div className="styleAsButon">{content}</div>} */}
     </header>
   );
 }
