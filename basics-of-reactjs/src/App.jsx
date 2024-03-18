@@ -4,16 +4,13 @@ import AppContent from "./componets/app-content";
 import AppFooter from "./componets/app-footer";
 import AppHeader from "./componets/app-header";
 import { webData } from "./data/webdata";
+import UserInfo from "./componets/user-info";
 
 function App() {
-  // webData;
-
-  let [content, setContent] = useState("");
+  let [content, setContent] = useState(null);
 
   function updateContent(newId) {
-    // alert("Clicked some button" + pageName);
-    setContent(newId + " is selected");
-    console.log("Updated content", content);
+    setContent(webData.details[newId]);
   }
 
   return (
@@ -25,6 +22,7 @@ function App() {
         handleOnClick={updateContent}
       ></AppHeader>
       <AppContent content={content} />
+      <UserInfo />
       <AppFooter />
     </>
   );
