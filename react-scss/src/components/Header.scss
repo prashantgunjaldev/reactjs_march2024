@@ -1,0 +1,22 @@
+$link-text-color: black;
+$link-option-bg-color: yellow;
+
+header {
+  nav {
+    ul {
+      li {
+        background-color: $link-option-bg-color;
+        display: inline-block;
+        margin: 0 5px;
+        a {
+          color: $link-text-color;
+          padding: 6px 12px;
+        }
+      }
+    }
+  }
+
+  div {
+    background-color: $link-option-bg-color;
+  }
+}
