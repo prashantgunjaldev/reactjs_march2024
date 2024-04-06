@@ -1,0 +1,30 @@
+[
+  {
+    "_id": 1,
+    "name": "Fullstack - MEAN",
+    "duration": "2 Months",
+    "description": "Learn fillstack development, now days fullstack development is really important in Software Companies and there are many demands is job markets for that.",
+    "show": true
+  },
+  {
+    "_id": 2,
+    "name": "Fullstack - MERN",
+    "duration": "2 Months",
+    "description": "Learn fillstack development, now days fullstack development is really important in Software Companies and there are many demands is job markets for that.",
+    "show": true
+  },
+  {
+    "_id": 3,
+    "name": "React JS",
+    "duration": "1 Month",
+    "description": "Learn fillstack development, now days fullstack development is really important in Software Companies and there are many demands is job markets for that.",
+    "show": true
+  },
+  {
+    "_id": 4,
+    "name": "Angular",
+    "duration": "1 Month",
+    "description": "Learn fillstack development, now days fullstack development is really important in Software Companies and there are many demands is job markets for that.",
+    "show": true
+  }
+]
